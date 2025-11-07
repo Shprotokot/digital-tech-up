@@ -1,43 +1,65 @@
-name: Deploy to GitHub Pages
+name: Deploy React App to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ] # Запускать процесс при пуше в ветку main
+    branches: [ "main" ]  # Запускать при пуше в ветку main
+
+# Даем разрешения для workflow
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Разрешаем одновременный деплой только один
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build_site:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
+      # 1. Получаем код из репозитория
       - name: Checkout
         uses: actions/checkout@v4
-
+        
+      # 2. Устанавливаем Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
-
+          node-version: '18'       # Версия Node.js
+          cache: 'npm'             # Кешируем зависимости для ускорения
+          
+      # 3. Устанавливаем зависимости
       - name: Install dependencies
         run: npm install
-
+        
+      # 4. Собираем проект
       - name: Build project
-        run: npm run build # Эта команда создаст папку 'build'
-
+        run: npm run build
+        
+      # 5. Настраиваем Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      # 6. Загружаем артефакт (собранные файлы)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build # Указываем путь к папке с собранным проектом
+          path: ./build    # Путь к собранным файлам
 
   deploy:
-    needs: build_site
+    needs: build          # Ждем завершения сборки
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
+    
+    # Настройки окружения для деплоя
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    
     steps:
+      # 7. Деплоим на GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

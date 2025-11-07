@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Award, TrendingUp, Calendar } from "lucide-react";
+import heroImage from "figma:asset/9f454fd7035877c0595c4e6e1bba924fbbd67610.png";
 
 export function Hero() {
   const scrollToContact = () => {
@@ -41,18 +42,39 @@ export function Hero() {
                 Узнать больше
               </Button>
             </div>
-            <div className="mt-12 grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-5 lg:p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-                <div className="text-2xl sm:text-4xl lg:text-5xl mb-1 sm:mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">250+</div>
-                <div className="text-white font-semibold text-xs sm:text-base lg:text-lg">Проектов</div>
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-5">
+              <div className="group relative bg-white/10 backdrop-blur-md rounded-2xl p-5 sm:p-4 lg:p-5 text-center hover:bg-white/15 transition-all duration-500 border border-white/30 hover:border-white/50 shadow-lg hover:shadow-2xl overflow-hidden min-h-[180px] sm:min-h-[160px] lg:min-h-[180px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-pink-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative w-full">
+                  <div className="inline-flex items-center justify-center w-12 h-12 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-yellow-200 to-pink-200 mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <Award className="w-6 h-6 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-indigo-700" />
+                  </div>
+                  <div className="text-4xl sm:text-3xl lg:text-4xl xl:text-5xl mb-1.5 font-extrabold bg-gradient-to-br from-yellow-200 via-pink-200 to-pink-100 bg-clip-text text-transparent leading-none">250+</div>
+                  <div className="text-white/90 font-semibold text-base sm:text-sm lg:text-base">Проектов</div>
+                  <div className="text-white/70 text-xs sm:text-xs mt-0.5">реализовано</div>
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-5 lg:p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-                <div className="text-2xl sm:text-4xl lg:text-5xl mb-1 sm:mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">98%</div>
-                <div className="text-white font-semibold text-xs sm:text-base lg:text-lg">Удержание</div>
+              <div className="group relative bg-white/10 backdrop-blur-md rounded-2xl p-5 sm:p-4 lg:p-5 text-center hover:bg-white/15 transition-all duration-500 border border-white/30 hover:border-white/50 shadow-lg hover:shadow-2xl overflow-hidden min-h-[180px] sm:min-h-[160px] lg:min-h-[180px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative w-full">
+                  <div className="inline-flex items-center justify-center w-12 h-12 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-yellow-200 to-pink-200 mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <TrendingUp className="w-6 h-6 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-indigo-700" />
+                  </div>
+                  <div className="text-4xl sm:text-3xl lg:text-4xl xl:text-5xl mb-1.5 font-extrabold bg-gradient-to-br from-yellow-200 via-pink-200 to-pink-100 bg-clip-text text-transparent leading-none">98%</div>
+                  <div className="text-white/90 font-semibold text-base sm:text-sm lg:text-base">Удержание</div>
+                  <div className="text-white/70 text-xs sm:text-xs mt-0.5">клиентов</div>
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-5 lg:p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-                <div className="text-2xl sm:text-4xl lg:text-5xl mb-1 sm:mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">5 лет</div>
-                <div className="text-white font-semibold text-xs sm:text-base lg:text-lg">На рынке</div>
+              <div className="group relative bg-white/10 backdrop-blur-md rounded-2xl p-5 sm:p-4 lg:p-5 text-center hover:bg-white/15 transition-all duration-500 border border-white/30 hover:border-white/50 shadow-lg hover:shadow-2xl overflow-hidden min-h-[180px] sm:min-h-[160px] lg:min-h-[180px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-pink-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative w-full">
+                  <div className="inline-flex items-center justify-center w-12 h-12 sm:w-11 sm:h-11 lg:w-12 lg:h-12 rounded-full bg-gradient-to-br from-yellow-200 to-pink-200 mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <Calendar className="w-6 h-6 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-indigo-700" />
+                  </div>
+                  <div className="text-4xl sm:text-3xl lg:text-4xl xl:text-5xl mb-1.5 font-extrabold bg-gradient-to-br from-yellow-200 via-pink-200 to-pink-100 bg-clip-text text-transparent leading-none">5 лет</div>
+                  <div className="text-white/90 font-semibold text-base sm:text-sm lg:text-base">На рынке</div>
+                  <div className="text-white/70 text-xs sm:text-xs mt-0.5">опыта</div>
+                </div>
               </div>
             </div>
           </div>
@@ -60,8 +82,8 @@ export function Hero() {
             <div className="relative w-full aspect-square lg:aspect-[4/5]">
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-400 to-pink-400 blur-3xl opacity-30"></div>
               <img 
-                src="https://images.unsplash.com/photo-1603985585179-3d71c35a537c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjE5MzU1Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Web Development"
+                src={heroImage}
+                alt="Digital Strategy & Analytics Workspace"
                 className="relative rounded-2xl shadow-2xl w-full h-full object-cover"
               />
             </div>

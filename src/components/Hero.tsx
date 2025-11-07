@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { ArrowRight, Sparkles, Briefcase, ThumbsUp, TrendingUp } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
   const scrollToContact = () => {
@@ -41,47 +41,18 @@ export function Hero() {
                 Узнать больше
               </Button>
             </div>
-             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-4 lg:gap-6">
-              {/* Блок 1: Проекты */}
-              <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-5 lg:p-6 hover:bg-white/20 transition-all duration-500 border border-white/20 hover:border-white/40 hover:shadow-2xl hover:shadow-white/20 sm:hover:scale-105">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
-                    <Briefcase className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
-                  </div>
-                  <div className="text-4xl sm:text-5xl mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">250+</div>
-                  <div className="text-white font-semibold text-base sm:text-lg mb-2">Проектов</div>
-                  <p className="text-white/80 text-xs sm:text-sm leading-relaxed">
-                    Реализованных решений для бизнеса любого масштаба
-                  </p>
-                </div>
+             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300 sm:hover:scale-105 border border-white/20">
+                <div className="text-4xl sm:text-5xl lg:text-5xl mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">250+</div>
+                <div className="text-white font-semibold text-base sm:text-lg">Проектов</div>
               </div>
-
-              {/* Блок 2: Удержание */}
-              <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-5 lg:p-6 hover:bg-white/20 transition-all duration-500 border border-white/20 hover:border-white/40 hover:shadow-2xl hover:shadow-white/20 sm:hover:scale-105">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
-                    <ThumbsUp className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
-                  </div>
-                  <div className="text-4xl sm:text-5xl mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">98%</div>
-                  <div className="text-white font-semibold text-base sm:text-lg mb-2">Удержание</div>
-                  <p className="text-white/80 text-xs sm:text-sm leading-relaxed">
-                    Клиентов возвращаются для новых проектов
-                  </p>
-                </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300 sm:hover:scale-105 border border-white/20">
+                <div className="text-4xl sm:text-5xl lg:text-5xl mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">98%</div>
+                <div className="text-white font-semibold text-base sm:text-lg">Удержание</div>
               </div>
-
-              {/* Блок 3: Опыт */}
-              <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-5 lg:p-6 hover:bg-white/20 transition-all duration-500 border border-white/20 hover:border-white/40 hover:shadow-2xl hover:shadow-white/20 sm:hover:scale-105">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
-                    <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
-                  </div>
-                  <div className="text-4xl sm:text-5xl mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">5 лет</div>
-                  <div className="text-white font-semibold text-base sm:text-lg mb-2">На рынке</div>
-                  <p className="text-white/80 text-xs sm:text-sm leading-relaxed">
-                    Экспертиза в digital-разработке и маркетинге
-                  </p>
-                </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300 sm:hover:scale-105 border border-white/20">
+                <div className="text-4xl sm:text-5xl lg:text-5xl mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">5 лет</div>
+                <div className="text-white font-semibold text-base sm:text-lg">На рынке</div>
               </div>
             </div>
           </div>

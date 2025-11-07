@@ -41,18 +41,18 @@ export function Hero() {
                 Узнать больше
               </Button>
             </div>
-             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300 sm:hover:scale-105 border border-white/20">
-                <div className="text-4xl sm:text-5xl lg:text-5xl mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">250+</div>
-                <div className="text-white font-semibold text-base sm:text-lg">Проектов</div>
+            <div className="mt-12 grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-5 lg:p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                <div className="text-2xl sm:text-4xl lg:text-5xl mb-1 sm:mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">250+</div>
+                <div className="text-white font-semibold text-xs sm:text-base lg:text-lg">Проектов</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300 sm:hover:scale-105 border border-white/20">
-                <div className="text-4xl sm:text-5xl lg:text-5xl mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">98%</div>
-                <div className="text-white font-semibold text-base sm:text-lg">Удержание</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-5 lg:p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                <div className="text-2xl sm:text-4xl lg:text-5xl mb-1 sm:mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">98%</div>
+                <div className="text-white font-semibold text-xs sm:text-base lg:text-lg">Удержание</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-all duration-300 sm:hover:scale-105 border border-white/20">
-                <div className="text-4xl sm:text-5xl lg:text-5xl mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">5 лет</div>
-                <div className="text-white font-semibold text-base sm:text-lg">На рынке</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-5 lg:p-6 text-center hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                <div className="text-2xl sm:text-4xl lg:text-5xl mb-1 sm:mb-2 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent leading-none">5 лет</div>
+                <div className="text-white font-semibold text-xs sm:text-base lg:text-lg">На рынке</div>
               </div>
             </div>
           </div>

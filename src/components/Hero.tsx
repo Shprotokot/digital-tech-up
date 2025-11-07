@@ -41,16 +41,16 @@ export function Hero() {
                 Узнать больше
               </Button>
             </div>
-            <div className="mt-12 grid grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-                <div className="text-5xl mb-1 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent">150+</div>
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                <div className="text-5xl mb-1 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent">250+</div>
                 <div className="text-white font-semibold">Проектов</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
                 <div className="text-5xl mb-1 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent">98%</div>
                 <div className="text-white font-semibold">Удержание</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-4 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
                 <div className="text-5xl mb-1 font-bold bg-gradient-to-r from-yellow-200 to-pink-200 bg-clip-text text-transparent">5 лет</div>
                 <div className="text-white font-semibold">На рынке</div>
               </div>

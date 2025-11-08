@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { ArrowRight, Sparkles, Award, TrendingUp, Calendar } from "lucide-react";
-import heroImage from "figma:asset/9f454fd7035877c0595c4e6e1bba924fbbd67610.png";
+import heroImage from "digital-tech-up/src/assets/new-hero-image.webp";
 
 export function Hero() {
   const scrollToContact = () => {

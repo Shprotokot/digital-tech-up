@@ -82,7 +82,7 @@ export function Hero() {
             <div className="relative w-full aspect-square lg:aspect-[4/5]">
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-400 to-pink-400 blur-3xl opacity-30"></div>
               <img 
-                src={heroImage}
+                src={heroImg}
                 alt="Digital Strategy & Analytics Workspace"
                 className="relative rounded-2xl shadow-2xl w-full h-full object-cover"
               />

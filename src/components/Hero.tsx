@@ -24,32 +24,6 @@ export function Hero() {
               Создаем высокопроизводительные веб-платформы с интегрированной маркетинговой стратегией. 
               Применяем data-driven подход для достижения измеримых KPI.
             </p>
-            import { Button } from "./ui/button";
-import { ArrowRight, Sparkles, Award, TrendingUp, Calendar } from "lucide-react";
-import heroImg from "../assets/new-hero-image.webp";
-
-export function Hero() {
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500">
-      <div className="absolute inset-0 bg-black/20"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-white">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <Sparkles className="w-4 h-4" />
-              <span className="text-sm">Полный цикл digital-решений</span>
-            </div>
-            <h1 className="mb-6 text-white font-bold text-5xl lg:text-6xl leading-tight">
-              Разработка сайтов и&nbsp;стратегия <span className="bg-gradient-to-r from-yellow-200 via-pink-200 to-pink-100 bg-clip-text text-transparent">интернет-маркетинга</span>
-            </h1>
-            <p className="text-2xl mb-8 text-white/95 font-medium leading-relaxed">
-              Создаем высокопроизводительные веб-платформы с интегрированной маркетинговой стратегией. 
-              Применяем data-driven подход для достижения измеримых KPI.
-            </p>
             <div className="flex flex-wrap gap-4">
               <Button 
                 size="lg" 
@@ -109,20 +83,6 @@ export function Hero() {
           </div>
           <div className="hidden lg:block">
             <div className="relative w-full aspect-square lg:aspect-[4/5]">
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-400 to-pink-400 blur-3xl opacity-30"></div>
-              <img 
-                src={heroImg}
-                alt="Digital Strategy & Analytics Workspace"
-                className="relative rounded-2xl shadow-2xl w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
-    </section>
-  );
-}
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-400 to-pink-400 blur-3xl opacity-30"></div>
               <img 
                 src={heroImg}

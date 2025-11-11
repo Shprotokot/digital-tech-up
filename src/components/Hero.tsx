@@ -28,16 +28,17 @@ export function Hero() {
               <Button 
   size="lg" 
   onClick={scrollToContact}
-  className="bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 px-10 py-7 text-2xl hover:scale-110 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 hover:brightness-110"
+  className="bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 px-10 py-7 font-bold hover:scale-110 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 hover:brightness-110"
+  style={{ fontSize: '1.5rem' }}
 >
   Начать проект
   <ArrowRight className="ml-2 w-7 h-7" />
-</Button>
-              <Button 
+<Button 
   size="lg" 
   variant="outline"
   onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 px-10 py-7 text-2xl hover:scale-105 hover:shadow-2xl"
+  className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 px-10 py-7 font-bold hover:scale-105 hover:shadow-2xl"
+  style={{ fontSize: '1.5rem' }}
 >
   Узнать больше
 </Button>
@@ -50,9 +51,9 @@ export function Hero() {
                     <Award className="w-6 h-6 text-white" />
                   </div>
                   <div className="mb-1">
-                    <div className="text-5xl font-ultrabold bg-gradient-to-br from-yellow-200 via-pink-200 to-pink-100 bg-clip-text text-transparent">250+</div>
-                  </div>
-                  <div className="text-white font-extrabold text-sm">Проектов</div>
+  <div className="bg-gradient-to-br from-yellow-200 via-pink-200 to-pink-100 bg-clip-text text-transparent" style={{ fontSize: '1.875rem', fontWeight: '800', lineHeight: '1.2' }}>250+</div>
+</div>
+                  <div className="text-white" style={{ fontSize: '0.875rem', fontWeight: '800', lineHeight: '1.25' }}>Проектов</div>
                 </div>
               </div>
               <div className="group relative bg-white/10 backdrop-blur-md rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-500 border border-white/30 hover:border-white/50 shadow-lg hover:shadow-2xl">
@@ -60,11 +61,11 @@ export function Hero() {
                 <div className="relative">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 mb-3 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                     <TrendingUp className="w-6 h-6 text-white" />
-                  </div>
                   <div className="mb-1">
-                    <div className="text-5xl font-ultrabold bg-gradient-to-br from-yellow-200 via-pink-200 to-pink-100 bg-clip-text text-transparent">98%</div>
+  <div className="bg-gradient-to-br from-yellow-200 via-pink-200 to-pink-100 bg-clip-text text-transparent" style={{ fontSize: '1.875rem', fontWeight: '800', lineHeight: '1.2' }}>98%</div>
+</div>
                   </div>
-                  <div className="text-white font-extrabold text-sm">Удержание</div>
+                  <div className="text-white" style={{ fontSize: '0.875rem', fontWeight: '800', lineHeight: '1.25' }}>Удержание</div>
                 </div>
               </div>
               <div className="group relative bg-white/10 backdrop-blur-md rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-500 border border-white/30 hover:border-white/50 shadow-lg hover:shadow-2xl">
@@ -74,9 +75,9 @@ export function Hero() {
                     <Calendar className="w-6 h-6 text-white" />
                   </div>
                   <div className="mb-1">
-                    <div className="text-5xl font-ultrabold bg-gradient-to-br from-yellow-200 via-pink-200 to-pink-100 bg-clip-text text-transparent">5 лет</div>
-                  </div>
-                  <div className="text-white font-extrabold text-sm">На рынке</div>
+  <div className="bg-gradient-to-br from-yellow-200 via-pink-200 to-pink-100 bg-clip-text text-transparent" style={{ fontSize: '1.875rem', fontWeight: '800', lineHeight: '1.2' }}>5 лет</div>
+</div>
+                  <div className="text-white" style={{ fontSize: '0.875rem', fontWeight: '800', lineHeight: '1.25' }}>На рынке</div>
                 </div>
               </div>
             </div>

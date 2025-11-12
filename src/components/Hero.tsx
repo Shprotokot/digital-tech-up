@@ -27,17 +27,17 @@ export function Hero() {
             <div className="flex flex-wrap gap-4">
               <Button 
                 onClick={scrollToContact}
-                className="inline-flex items-center justify-center gap-3 bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 px-8 py-4 font-bold rounded-xl hover:scale-105 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 hover:brightness-110 min-h-[60px]"
-                style={{ fontSize: '1.125rem', lineHeight: '1.5' }}
+                className="inline-flex items-center justify-center gap-3 bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 px-12 py-6 font-bold rounded-2xl hover:scale-105 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 hover:brightness-110"
+                style={{ fontSize: '1.25rem', lineHeight: '1.5', minHeight: '70px' }}
               >
                 Начать проект
-                <ArrowRight className="w-6 h-6" />
+                <ArrowRight className="w-6 h-6 shrink-0" />
               </Button>
               <Button 
                 variant="outline"
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center justify-center gap-3 border-2 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 px-8 py-4 font-bold rounded-xl hover:scale-105 hover:shadow-2xl min-h-[60px]"
-                style={{ fontSize: '1.125rem', lineHeight: '1.5' }}
+                className="inline-flex items-center justify-center gap-3 border-3 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 px-12 py-6 font-bold rounded-2xl hover:scale-105 hover:shadow-2xl"
+                style={{ fontSize: '1.25rem', lineHeight: '1.5', minHeight: '70px', borderWidth: '3px' }}
               >
                 Узнать больше
               </Button>

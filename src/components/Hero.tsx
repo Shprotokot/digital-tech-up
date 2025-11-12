@@ -24,23 +24,22 @@ export function Hero() {
               Создаем высокопроизводительные веб-платформы с интегрированной маркетинговой стратегией. 
               Применяем data-driven подход для достижения измеримых KPI.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button 
+            <div className="flex gap-4 items-center">
+              <button 
                 onClick={scrollToContact}
-                className="inline-flex items-center justify-center gap-3 bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 px-16 py-6 font-bold rounded-2xl hover:scale-105 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 hover:brightness-110"
-                style={{ fontSize: '1.25rem', lineHeight: '1.5', minHeight: '70px' }}
+                className="inline-flex items-center justify-center gap-3 bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 px-10 py-5 font-bold rounded-2xl hover:scale-105 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 hover:brightness-110 cursor-pointer whitespace-nowrap"
+                style={{ fontSize: '1.125rem', lineHeight: '1.5', minHeight: '64px' }}
               >
                 Начать проект
-                <ArrowRight className="w-6 h-6 shrink-0" />
-              </Button>
-              <Button 
-                variant="outline"
+                <ArrowRight className="w-5 h-5 shrink-0" />
+              </button>
+              <button 
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center justify-center gap-3 border-3 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 px-16 py-6 font-bold rounded-2xl hover:scale-105 hover:shadow-2xl"
-                style={{ fontSize: '1.25rem', lineHeight: '1.5', minHeight: '70px', borderWidth: '3px' }}
+                className="inline-flex items-center justify-center gap-3 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 px-10 py-5 font-bold rounded-2xl hover:scale-105 hover:shadow-2xl cursor-pointer whitespace-nowrap"
+                style={{ fontSize: '1.125rem', lineHeight: '1.5', minHeight: '64px', borderWidth: '3px', borderStyle: 'solid' }}
               >
                 Узнать больше
-              </Button>
+              </button>
             </div>
             <div className="mt-12 grid grid-cols-3 gap-4">
               <div className="group relative bg-white/10 backdrop-blur-md rounded-2xl p-4 text-center hover:bg-white/15 transition-all duration-500 border border-white/30 hover:border-white/50 shadow-lg hover:shadow-2xl">

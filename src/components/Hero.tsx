@@ -26,20 +26,18 @@ export function Hero() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button 
-                size="lg" 
                 onClick={scrollToContact}
-                className="bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 px-10 py-7 font-bold hover:scale-110 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 hover:brightness-110"
-                style={{ fontSize: '1.5rem' }}
+                className="inline-flex items-center justify-center gap-3 bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 px-8 py-4 font-bold rounded-xl hover:scale-105 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 hover:brightness-110 min-h-[60px]"
+                style={{ fontSize: '1.125rem', lineHeight: '1.5' }}
               >
                 Начать проект
-                <ArrowRight className="ml-2 w-7 h-7" />
+                <ArrowRight className="w-6 h-6" />
               </Button>
               <Button 
-                size="lg" 
                 variant="outline"
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 px-10 py-7 font-bold hover:scale-105 hover:shadow-2xl"
-                style={{ fontSize: '1.5rem' }}
+                className="inline-flex items-center justify-center gap-3 border-2 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 px-8 py-4 font-bold rounded-xl hover:scale-105 hover:shadow-2xl min-h-[60px]"
+                style={{ fontSize: '1.125rem', lineHeight: '1.5' }}
               >
                 Узнать больше
               </Button>

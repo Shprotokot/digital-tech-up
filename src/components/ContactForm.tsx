@@ -212,17 +212,15 @@ export function ContactForm() {
               ref={formRef}
               name="contact"
               method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="honeypot"
               onSubmit={handleSubmit}
               className="space-y-6"
             >
               {/* Скрытое поле для Netlify - идентифицирует форму */}
               <input type="hidden" name="form-name" value="contact" />
               
-              {/* Honeypot field (защита от спама) */}
+              {/* Honeypot field (защита от спама) - скрыт через CSS */}
               <div style={{ position: 'absolute', width: '1px', height: '1px', margin: '-1px', border: 0, padding: 0, whiteSpace: 'nowrap', clipPath: 'inset(100%)', clip: 'rect(0 0 0 0)', overflow: 'hidden' }}>
-                <input type="text" name="honeypot" placeholder="Name" autoComplete="off" tabIndex={-1} />
+                <input type="text" name="honeypot" autoComplete="off" tabIndex={-1} />
               </div>
 
               <div>

@@ -32,6 +32,18 @@
   <meta name="theme-color" content="#6366f1">
 </head>
 <body>
+  <!-- Скрытая форма для Netlify - НЕ УДАЛЯТЬ! 
+     Netlify парсит HTML во время билда и ищет формы.
+     React генерирует HTML динамически, поэтому нужен этот статический шаблон.
+-->
+<form name="contact" netlify netlify-honeypot="honeypot" hidden>
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="text" name="honeypot" />
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <input type="tel" name="phone" />
+  <textarea name="message"></textarea>
+</form>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>

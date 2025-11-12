@@ -27,11 +27,11 @@ export function Hero() {
             <div className="flex gap-4 items-center">
               <button 
                 onClick={scrollToContact}
-                className="inline-flex items-center justify-center gap-3 bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 rounded-2xl hover:scale-105 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 hover:brightness-110 cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-3 bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 rounded-2xl hover:scale-105 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 cursor-pointer whitespace-nowrap font-black"
                 style={{ 
-                  fontSize: '1.125rem !important', 
-                  lineHeight: '1.5 !important', 
-                  fontWeight: '900 !important',
+                  fontSize: '1.125rem', 
+                  lineHeight: '1.5', 
+                  fontWeight: 900,
                   minHeight: '64px',
                   paddingLeft: '2.5rem',
                   paddingRight: '2.5rem',
@@ -44,11 +44,11 @@ export function Hero() {
               </button>
               <button 
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center justify-center gap-3 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 rounded-2xl hover:scale-105 hover:shadow-2xl cursor-pointer whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-3 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 rounded-2xl hover:scale-105 hover:shadow-2xl cursor-pointer whitespace-nowrap font-black"
                 style={{ 
-                  fontSize: '1.125rem !important', 
-                  lineHeight: '1.5 !important', 
-                  fontWeight: '900 !important',
+                  fontSize: '1.125rem', 
+                  lineHeight: '1.5', 
+                  fontWeight: 900,
                   minHeight: '64px',
                   borderWidth: '3px', 
                   borderStyle: 'solid',

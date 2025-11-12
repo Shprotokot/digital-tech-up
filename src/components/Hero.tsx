@@ -27,16 +27,36 @@ export function Hero() {
             <div className="flex gap-4 items-center">
               <button 
                 onClick={scrollToContact}
-                className="inline-flex items-center justify-center gap-3 bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 px-10 py-5 font-bold rounded-2xl hover:scale-105 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 hover:brightness-110 cursor-pointer whitespace-nowrap"
-                style={{ fontSize: '1.125rem', lineHeight: '1.5', minHeight: '64px' }}
+                className="inline-flex items-center justify-center gap-3 bg-white text-indigo-600 hover:bg-gradient-to-r hover:from-yellow-300 hover:via-pink-300 hover:to-yellow-200 hover:text-indigo-700 rounded-2xl hover:scale-105 hover:shadow-[0_0_40px_rgba(251,207,232,0.8)] transition-all duration-300 hover:brightness-110 cursor-pointer whitespace-nowrap"
+                style={{ 
+                  fontSize: '1.125rem !important', 
+                  lineHeight: '1.5 !important', 
+                  fontWeight: '900 !important',
+                  minHeight: '64px',
+                  paddingLeft: '2.5rem',
+                  paddingRight: '2.5rem',
+                  paddingTop: '1.25rem',
+                  paddingBottom: '1.25rem'
+                }}
               >
                 Начать проект
                 <ArrowRight className="w-5 h-5 shrink-0" />
               </button>
               <button 
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center justify-center gap-3 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 px-10 py-5 font-bold rounded-2xl hover:scale-105 hover:shadow-2xl cursor-pointer whitespace-nowrap"
-                style={{ fontSize: '1.125rem', lineHeight: '1.5', minHeight: '64px', borderWidth: '3px', borderStyle: 'solid' }}
+                className="inline-flex items-center justify-center gap-3 border-white text-white bg-transparent hover:bg-white hover:text-indigo-600 transition-all duration-300 rounded-2xl hover:scale-105 hover:shadow-2xl cursor-pointer whitespace-nowrap"
+                style={{ 
+                  fontSize: '1.125rem !important', 
+                  lineHeight: '1.5 !important', 
+                  fontWeight: '900 !important',
+                  minHeight: '64px',
+                  borderWidth: '3px', 
+                  borderStyle: 'solid',
+                  paddingLeft: '2.5rem',
+                  paddingRight: '2.5rem',
+                  paddingTop: '1.25rem',
+                  paddingBottom: '1.25rem'
+                }}
               >
                 Узнать больше
               </button>

@@ -76,66 +76,36 @@ export function ContactForm() {
       const form = e.currentTarget;
       const formData = new FormData(form);
 
-      // Получаем данные из формы
-      const formDataObj = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        message: formData.get('message'),
-      };
-
-      // Проверяем, защита от спама (honeypot)
+      // Проверяем honeypot защиту от спама
       if (formData.get('honeypot')) {
         console.warn('🚫 Spam detected');
+        setIsSubmitting(false);
         return;
       }
 
-      console.log('📧 Отправка заявки:', formDataObj);
+      console.log('📧 Отправка заявки через Netlify Forms');
 
-      // Пытаемся отправить на сервер (работает только на продакшене с PHP)
-      try {
-        const response = await fetch('/send-email.php', {
-          method: 'POST',
-          body: formData,
-        });
+      // Кодируем данные формы для Netlify
+      const formEncoded = new URLSearchParams(formData as any).toString();
 
-        const contentType = response.headers.get('content-type');
-        
-        if (response.ok && contentType && contentType.includes('application/json')) {
-          // Production режим - PHP вернул JSON
-          const result = await response.json();
-          
-          if (result.success) {
-            console.log('✅ Email отправлен на noreply@digital-tu.ru');
-            setShowSuccessDialog(true);
-            toast.success("Заявка успешно отправлена!");
-            form.reset();
-            setPhoneValue("");
-          } else {
-            throw new Error(result.message || 'Server error');
-          }
-        } else {
-          // Dev режим - PHP недоступен или вернул не JSON
-          throw new Error('PHP endpoint not available');
-        }
-      } catch (fetchError) {
-        // Dev режим - симулируем успешную отправку
-        console.log('📧 DEV MODE: Режим симуляции');
-        console.log('📧 На продакшене (с PHP) данные будут отправлены на: noreply@digital-tu.ru');
-        console.log('📧 Данные формы:', formDataObj);
-        console.log('💡 Инструкции по настройке: см. EMAIL_SETUP.md');
-        
-        // Симулируем задержку для реалистичности
-        await new Promise(resolve => setTimeout(resolve, 500));
-        
-        // Показываем успех
+      // Отправляем данные в Netlify Forms
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formEncoded,
+      });
+
+      if (response.ok) {
+        console.log('✅ Заявка успешно отправлена через Netlify Forms');
         setShowSuccessDialog(true);
-        toast.success("Заявка отправлена!");
+        toast.success("Заявка успешно отправлена!");
         form.reset();
         setPhoneValue("");
+      } else {
+        throw new Error('Ошибка отправки');
       }
     } catch (error) {
-      console.error("❌ Ошибка при обработке формы:", error);
+      console.error("❌ Ошибка при отправке формы:", error);
       toast.error("Не удалось отправить заявку. Попробуйте позже.");
     } finally {
       setIsSubmitting(false);
@@ -240,9 +210,16 @@ export function ContactForm() {
           <div className="bg-white rounded-2xl p-8 shadow-2xl">
             <form 
               ref={formRef}
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="honeypot"
               onSubmit={handleSubmit}
               className="space-y-6"
             >
+              {/* Скрытое поле для Netlify - идентифицирует форму */}
+              <input type="hidden" name="form-name" value="contact" />
+              
               {/* Honeypot field (защита от спама) */}
               <div style={{ position: 'absolute', width: '1px', height: '1px', margin: '-1px', border: 0, padding: 0, whiteSpace: 'nowrap', clipPath: 'inset(100%)', clip: 'rect(0 0 0 0)', overflow: 'hidden' }}>
                 <input type="text" name="honeypot" placeholder="Name" autoComplete="off" tabIndex={-1} />
@@ -319,7 +296,7 @@ export function ContactForm() {
             </div>
             <DialogTitle className="text-center text-2xl">Ваша заявка в работе!</DialogTitle>
             <DialogDescription className="text-center text-lg pt-4">
-              Данные отправлены на info@digital-tu.ru. Мы свяжемся с вами в ближайшее время!
+              Команда Digital TechUp свяжется с вами в ближайшее время!
             </DialogDescription>
           </DialogHeader>
           <div className="pt-4">
